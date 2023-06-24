@@ -1,8 +1,28 @@
+"use client";
+
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
-const Header = () => {
+interface HeaderProps {
+    children: React.ReactNode;
+    className?: string;
+}
+
+const Header: React.FC<HeaderProps> = ({
+    children,
+    className
+}) => {
+    const router = useRouter();
+
+    const handleLogout = () => {
+        // Handle logout later
+    }
+
   return (
-    <div>Header</div>
+    
+    <div>
+
+    </div>
   )
 }
 
