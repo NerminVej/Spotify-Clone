@@ -9,7 +9,7 @@ Full Stack Spotify Clone
 [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=for-the-badge)](https://www.postgresql.org/)
 [![Stripe](https://img.shields.io/badge/-Stripe-008CDD?logo=stripe&logoColor=white&style=for-the-badge)](https://stripe.com/)
 
-This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL, and Stripe. It provides a comprehensive music streaming platform with key features such as song upload, Stripe integration, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase and Github, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
+This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL, and Stripe. It provides a comprehensive music streaming platform with key features such as song upload, Stripe integration, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
 Key Features
 
 - Song upload functionality
@@ -32,13 +32,13 @@ Key Features
 - Handling relations between server and child components in a real-time environment
 - Cancelling Stripe subscriptions
 
-Getting Started
+## Getting Started
 
 To get started with the Full Stack Spotify Clone, follow these steps:
 
     Clone the repository:
 
-git clone https://github.com/your-username/spotify-clone.git
+git clone https://github.com/NerminVej/spotify-clone.git
 
     Install dependencies:
 
