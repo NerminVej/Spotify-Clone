@@ -28,7 +28,8 @@ const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
         roounded-md
         overflow-hidden
         gap-x-4
-        bg-neutral-100/10hover:bg-neutral-100/20
+        bg-neutral-100/10
+        hover:bg-neutral-100/20
         transition
         pr-4
     "
@@ -42,6 +43,9 @@ const ListItem: React.FC<ListItemProps> = ({ image, name, href }) => {
       >
         <Image className="object-cover" fill src={image} alt="Image" />
       </div>
+      <p>
+        {name}
+      </p>
     </button>
   );
 };
