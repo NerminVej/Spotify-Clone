@@ -108,7 +108,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           </button>
         </div>
 
-        <div className="flex justify-between items-center gap-x-4">
+        <div className="flex justify-end items-center gap-x-4">
           <>
             <div>
               <Button
