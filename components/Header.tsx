@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import { RxCaretLeft } from "react-icons/rx";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -42,7 +43,21 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             gap-x-2
             items-center
             "
-        ></div>
+        >
+          <button
+            className="
+            rounded-full
+            bg-black
+            flex
+            items-center
+            justify-center
+            hover:opacity-75
+            transition
+            "
+          >
+            <RxCaretLeft className="text-white" size={35} />
+          </button>
+        </div>
       </div>
     </div>
   );
