@@ -112,6 +112,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           <>
             <div>
               <Button
+                onClick={() => {}}
                 className="
               bg-transparent
               text-neutral-300
@@ -123,6 +124,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             </div>
             <div>
               <Button
+                onClick={() => {}}
                 className="
                 bg-white
                 px-6
@@ -135,6 +137,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           </>
         </div>
       </div>
+      {children}
     </div>
   );
 };
