@@ -1,6 +1,6 @@
 Full Stack Spotify Clone
 
-Technologies Used:
+## Technologies Used:
 
 [![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white&style=for-the-badge)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=for-the-badge)](https://reactjs.org/)
@@ -12,25 +12,25 @@ Technologies Used:
 This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL, and Stripe. It provides a comprehensive music streaming platform with key features such as song upload, Stripe integration, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase and Github, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
 Key Features
 
-    Song upload functionality
-    Integration with Stripe for payment processing
-    Sleek UI design using Tailwind CSS
-    Animations and transition effects powered by Tailwind CSS
-    Full responsiveness for seamless experience on all devices
-    Authentication with Supabase for secure user access
-    Integration with Github for authentication purposes
-    File and image upload capabilities using Supabase storage
-    Client-side form validation and handling using react-hook-form
-    Server error handling with react-toast notifications
-    Audio player for playing songs
-    Favorites system for saving preferred songs
-    Playlists and liked songs system for organizing music
-    Advanced Player component with enhanced functionality
-    Integration with Stripe for recurring payments
-    Implementation of POST, GET, and DELETE routes in route handlers (app/api)
-    Data fetching in server-side React components by directly accessing the database (without API)
-    Handling relations between server and child components in a real-time environment
-    Cancelling Stripe subscriptions
+- Song upload functionality
+- Integration with Stripe for payment processing
+- Sleek UI design using Tailwind CSS
+- Animations and transition effects powered by Tailwind CSS
+- Full responsiveness for seamless experience on all devices
+- Authentication with Supabase for secure user access
+- Integration with Github for authentication purposes
+- File and image upload capabilities using Supabase storage
+- Client-side form validation and handling using react-hook-form
+- Server error handling with react-toast notifications
+- Audio player for playing songs
+- Favorites system for saving preferred songs
+- Playlists and liked songs system for organizing music
+- Advanced Player component with enhanced functionality
+- Integration with Stripe for recurring payments
+- Implementation of POST, GET, and DELETE routes in route handlers (app/api)
+- Data fetching in server-side React components by directly accessing the database (without API)
+- Handling relations between server and child components in a real-time environment
+- Cancelling Stripe subscriptions
 
 Getting Started
 
@@ -38,11 +38,9 @@ To get started with the Full Stack Spotify Clone, follow these steps:
 
     Clone the repository:
 
-
 git clone https://github.com/your-username/spotify-clone.git
 
     Install dependencies:
-
 
 cd spotify-clone
 npm install
