@@ -1,35 +1,39 @@
-import React, { Children, useMemo } from 'react'
+"use client"
+
+import React, { Children, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+import Box from "./Box";
 
 interface SidebarProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
-const Sidebar: React.FC<SidebarProps> = ({
-    children
-}) => {
+const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+  const pathname = usePathname();
 
-const pathname = usePathname();
-
-const routes = useMemo(() => [
-    {
+  const routes = useMemo(
+    () => [
+      {
         icon: HiHome,
         label: "Home",
         active: pathname !== "/search",
         href: "/",
-    },
-    {
+      },
+      {
         icon: BiSearch,
         label: "Search",
         active: pathname === "/search",
         href: "search",
-    }
-], [pathname]);
+      },
+    ],
+    [pathname]
+  );
 
   return (
-    <div className='flex h-full'>
-        <div className='
+    <div className="flex h-full">
+      <div
+        className="
         hidden
         md:flex
         flex-col
@@ -38,13 +42,12 @@ const routes = useMemo(() => [
         h-full
         w-[300px]
         p-2
-        '>
-<Box>
-    Sidebar Navigation
-</Box>
-        </div>
+        "
+      >
+        <Box>Sidebar Navigation</Box>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
