@@ -8,6 +8,9 @@ import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModal";
+import { useUser } from "@/hooks/useUser";
+import { supabase } from "@supabase/auth-ui-shared";
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -15,12 +18,20 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ children, className }) => {
-  
   const authModal = useAuthModal();
   const router = useRouter();
+  const { user } = useUser();
+  const supabaseClient = useSupabaseClient();
+  
 
-  const handleLogout = () => {
-    // Handle logout later
+  const handleLogout = async () => {
+    const { error } = await supabaseClient.auth.signOut();
+    router.refresh();
+
+    if(error){
+      console.log(error);
+      
+    }
   };
 
   return (
