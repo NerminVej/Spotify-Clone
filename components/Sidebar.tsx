@@ -28,8 +28,21 @@ const routes = useMemo(() => [
 ], [pathname]);
 
   return (
-    <div>
-        {children}
+    <div className='flex h-full'>
+        <div className='
+        hidden
+        md:flex
+        flex-col
+        gap-y-2
+        bg-black
+        h-full
+        w-[300px]
+        p-2
+        '>
+<Box>
+    Sidebar Navigation
+</Box>
+        </div>
     </div>
   )
 }
