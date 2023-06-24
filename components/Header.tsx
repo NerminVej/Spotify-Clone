@@ -108,21 +108,30 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           </button>
         </div>
 
-        <div
-          className="
-            flex
-            justify-between
-            items-center
-            gap-x-4
-
-            "
-        >
+        <div className="flex justify-between items-center gap-x-4">
           <>
-          <div>
-            <Button>
+            <div>
+              <Button
+                className="
+              bg-transparent
+              text-neutral-300
+              font-medium
+              "
+              >
                 Sign up
-            </Button>
-          </div>
+              </Button>
+            </div>
+            <div>
+              <Button
+                className="
+                bg-white
+                px-6
+                py-2
+                "
+              >
+                Log in
+              </Button>
+            </div>
           </>
         </div>
       </div>
