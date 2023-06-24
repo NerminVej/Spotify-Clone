@@ -1,5 +1,7 @@
 "use client";
 
+import Modal from "@/components/Modal";
+
 import { useEffect, useState } from "react";
 
 const ModalProvider = () => {
@@ -13,7 +15,11 @@ const ModalProvider = () => {
     return null;
   }
 
-  return <>Modals!</>;
+  return (
+    <>
+      <Modal />
+    </>
+  );
 };
 
 export default ModalProvider;
