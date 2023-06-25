@@ -7,18 +7,15 @@ Full Stack Spotify Clone
 [![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/-Supabase-003B68?logo=supabase&logoColor=white&style=for-the-badge)](https://supabase.io/)
 [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=for-the-badge)](https://www.postgresql.org/)
-[![Stripe](https://img.shields.io/badge/-Stripe-008CDD?logo=stripe&logoColor=white&style=for-the-badge)](https://stripe.com/)
 
-This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL, and Stripe. It provides a comprehensive music streaming platform with key features such as song upload, Stripe integration, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
+This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL. It provides a comprehensive music streaming platform with key features such as song upload, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
 Key Features
 
 - Song upload functionality
-- Integration with Stripe for payment processing
 - Sleek UI design using Tailwind CSS
 - Animations and transition effects powered by Tailwind CSS
 - Full responsiveness for seamless experience on all devices
 - Authentication with Supabase for secure user access
-- Integration with Github for authentication purposes
 - File and image upload capabilities using Supabase storage
 - Client-side form validation and handling using react-hook-form
 - Server error handling with react-toast notifications
@@ -30,7 +27,6 @@ Key Features
 - Implementation of POST, GET, and DELETE routes in route handlers (app/api)
 - Data fetching in server-side React components by directly accessing the database (without API)
 - Handling relations between server and child components in a real-time environment
-- Cancelling Stripe subscriptions
 
 ## Getting Started
 
