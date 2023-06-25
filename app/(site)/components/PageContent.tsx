@@ -1,87 +1,49 @@
 "use client";
 
-import Image from "next/image";
-
-import useLoadImage from "@/hooks/useLoadImage";
 import { Song } from "@/types";
+import useOnPlay from "@/hooks/useOnPlay";
+import SongItem from "@/components/SongItem";
 
-import PlayButton from "@/components/PlayButton";
-
-interface SongItemProps {
-  data: Song;
-  onClick: (id: string) => void;
+interface PageContentProps {
+  songs: Song[];
 }
 
-const SongItem: React.FC<SongItemProps> = ({
-  data,
-  onClick
+const PageContent: React.FC<PageContentProps> = ({
+  songs
 }) => {
-  const imagePath = useLoadImage(data);
+  const onPlay = useOnPlay(songs);
+
+  if (songs.length === 0) {
+    return (
+      <div className="mt-4 text-neutral-400">
+        No songs available.
+      </div>
+    )
+  }
 
   return ( 
-    <div
-      onClick={() => onClick(data.id)} 
+    <div 
       className="
-        relative 
-        group 
-        flex 
-        flex-col 
-        items-center 
-        justify-center 
-        rounded-md 
-        overflow-hidden 
-        gap-x-4 
-        bg-neutral-400/5 
-        cursor-pointer 
-        hover:bg-neutral-400/10 
-        transition 
-        p-3
+        grid 
+        grid-cols-2 
+        sm:grid-cols-3 
+        md:grid-cols-3 
+        lg:grid-cols-4 
+        xl:grid-cols-5 
+        2xl:grid-cols-8 
+        gap-4 
+        mt-4
       "
     >
-      <div 
-        className="
-          relative 
-          aspect-square 
-          w-full
-          h-full 
-          rounded-md 
-          overflow-hidden
-        "
-      >
-        <Image
-          className="object-cover"
-          src={imagePath || '/images/music-placeholder.png'}
-          fill
-          alt="Image"
+      {songs.map((item) => (
+        <SongItem 
+          onClick={(id: string) => onPlay(id)} 
+          key={item.id} 
+          data={item}
         />
-      </div>
-      <div className="flex flex-col items-start w-full pt-4 gap-y-1">
-        <p className="font-semibold truncate w-full">
-          {data.title}
-        </p>
-        <p 
-          className="
-            text-neutral-400 
-            text-sm 
-            pb-4 
-            w-full 
-            truncate
-          "
-        >
-          By {data.author}
-        </p>
-      </div>
-      <div 
-        className="
-          absolute 
-          bottom-24 
-          right-5
-        "
-      >
-        <PlayButton />
-      </div>
+      ))}
     </div>
-   );
+  );
 }
  
-export default SongItem;
+export default PageContent;
