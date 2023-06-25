@@ -11,34 +11,38 @@ const useSongById = (id?: string) => {
 
   useEffect(() => {
     if (!id) {
-      return;
+      return; // If no ID is provided, return early
     }
 
-    setIsLoading(true);
+    setIsLoading(true); // Set loading state to true
 
     const fetchSong = async () => {
       const { data, error } = await supabaseClient
-        .from('songs')
-        .select('*')
-        .eq('id', id)
-        .single();
+        .from("songs")
+        .select("*")
+        .eq("id", id)
+        .single(); // Fetch the song with the specified ID
 
       if (error) {
-        setIsLoading(false);
-        return toast.error(error.message);
+        setIsLoading(false); // Set loading state to false
+        return toast.error(error.message); // Display an error toast message
       }
-      
-      setSong(data as Song);
-      setIsLoading(false);
-    }
 
-    fetchSong();
+      setSong(data as Song); // Set the fetched song data
+      setIsLoading(false); // Set loading state to false
+    };
+
+    fetchSong(); // Call the fetchSong function
   }, [id, supabaseClient]);
 
-  return useMemo(() => ({
-    isLoading,
-    song
-  }), [isLoading, song]);
+  // Use useMemo to memoize the returned object
+  return useMemo(
+    () => ({
+      isLoading,
+      song,
+    }),
+    [isLoading, song]
+  );
 };
 
 export default useSongById;

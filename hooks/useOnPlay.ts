@@ -11,14 +11,13 @@ const useOnPlay = (songs: Song[]) => {
 
   const onPlay = (id: string) => {
     if (!user) {
-      return authModal.onOpen();
+      return authModal.onOpen(); // If the user is not authenticated, open the authentication modal
     }
 
-
-
+    // Set the current song ID and the list of song IDs in the player
     player.setId(id);
     player.setIds(songs.map((song) => song.id));
-  }
+  };
 
   return onPlay;
 };
