@@ -4,11 +4,15 @@ import ListItem from "@/components/ListItem";
 
 import PageContent from "./components/PageContent";
 
+// Set revalidate value
 export const revalidate = 0;
 
+// Home component
 export default async function Home() {
+  // Fetch songs data
   const songs = await getSongs();
 
+  // Render the home page content
   return (
     <div
       className="
@@ -27,8 +31,9 @@ export default async function Home() {
             text-white 
               text-3xl 
               font-semibold
-            ">
-              Welcome back
+            "
+          >
+            Welcome back
           </h1>
           <div 
             className="
@@ -58,5 +63,5 @@ export default async function Home() {
         <PageContent songs={songs} />
       </div>
     </div>
-  )
+  );
 }
