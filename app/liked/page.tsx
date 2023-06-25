@@ -8,8 +8,10 @@ import LikedContent from "./components/LikedContent";
 export const revalidate = 0;
 
 const Liked = async () => {
+  // Fetch the liked songs
   const songs = await getLikedSongs();
 
+  // Render the liked songs page
   return (
     <div
       className="
@@ -33,6 +35,7 @@ const Liked = async () => {
             "
           >
             <div className="relative h-32 w-32 lg:h-44 lg:w-44">
+              {/* Render the playlist image */}
               <Image
                 className="object-cover"
                 fill
@@ -41,7 +44,9 @@ const Liked = async () => {
               />
             </div>
             <div className="flex flex-col gap-y-2 mt-4 md:mt-0">
+              {/* Render the playlist label */}
               <p className="hidden md:block font-semibold text-sm">Playlist</p>
+              {/* Render the playlist title */}
               <h1
                 className="
                   text-white 
@@ -57,6 +62,7 @@ const Liked = async () => {
           </div>
         </div>
       </Header>
+      {/* Render the liked songs content */}
       <LikedContent songs={songs} />
     </div>
   );
