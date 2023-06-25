@@ -26,7 +26,9 @@ const Library: React.FC<LibraryProps> = ({
       return authModal.onOpen();
     }
 
-    
+    if (!subscription) {
+      return subscribeModal.onOpen();
+    }
 
     return uploadModal.onOpen();
   }
@@ -51,7 +53,15 @@ const Library: React.FC<LibraryProps> = ({
           "
         />
       </div>
-      
+      <div className="flex flex-col gap-y-2 mt-4 px-3">
+        {songs.map((item) => (
+          <MediaItem 
+            onClick={(id: string) => onPlay(id)} 
+            key={item.id} 
+            data={item}
+          />
+        ))}
+      </div>
     </div>
    );
 }
