@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { HiHome } from "react-icons/hi";
