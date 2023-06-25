@@ -10,7 +10,10 @@ import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 import { supabase } from "@supabase/auth-ui-shared";
-import { useSupabaseClient, useSessionContext } from '@supabase/auth-helpers-react';
+import {
+  useSupabaseClient,
+  useSessionContext,
+} from "@supabase/auth-helpers-react";
 import { FaUserAlt } from "react-icons/fa";
 import { toast } from "react-hot-toast";
 
@@ -25,36 +28,35 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   const { user } = useUser();
   const supabaseClient = useSupabaseClient();
   const { session } = useSessionContext();
-  
 
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut();
     router.refresh();
 
-    if(error){
+    if (error) {
       toast.error(error.message);
+    } else {
+      toast.success("Logged out!");
     }
-      else {
-        toast.success("Logged out!")
-      }
-      
-    
   };
 
   return (
     <div
-      className={twMerge(`
+      className={twMerge(
+        `
         h-fit 
         bg-gradient-to-b 
         from-emerald-800 
         p-6
         `,
         className
-      )}>
+      )}
+    >
       <div className="w-full mb-4 flex items-center justify-between">
+        {/* Back and Forward Buttons (Hidden on Mobile) */}
         <div className="hidden md:flex gap-x-2 items-center">
-          <button 
-            onClick={() => router.back()} 
+          <button
+            onClick={() => router.back()}
             className="
               rounded-full 
               bg-black 
@@ -68,8 +70,8 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           >
             <RxCaretLeft className="text-white" size={35} />
           </button>
-          <button 
-            onClick={() => router.forward()} 
+          <button
+            onClick={() => router.forward()}
             className="
               rounded-full 
               bg-black 
@@ -84,9 +86,10 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             <RxCaretRight className="text-white" size={35} />
           </button>
         </div>
+        {/* Home and Search Buttons (Visible on Mobile) */}
         <div className="flex md:hidden gap-x-2 items-center">
-          <button 
-            onClick={() => router.push('/')} 
+          <button
+            onClick={() => router.push("/")}
             className="
               rounded-full 
               p-2 
@@ -101,8 +104,8 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
           >
             <HiHome className="text-black" size={20} />
           </button>
-          <button 
-            onClick={() => router.push('/search')} 
+          <button
+            onClick={() => router.push("/search")}
             className="
               rounded-full 
               p-2 
@@ -118,27 +121,27 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
             <BiSearch className="text-black" size={20} />
           </button>
         </div>
+        {/* User Authentication Buttons */}
         <div className="flex justify-between items-center gap-x-4">
           {user ? (
+            // User is logged in
             <div className="flex gap-x-4 items-center">
-              <Button 
-                onClick={handleLogout} 
-                className="bg-white px-6 py-2"
-              >
+              <Button onClick={handleLogout} className="bg-white px-6 py-2">
                 Logout
               </Button>
-              <Button 
-                onClick={() => router.push('/account')} 
+              <Button
+                onClick={() => router.push("/account")}
                 className="bg-white"
               >
                 <FaUserAlt />
               </Button>
             </div>
           ) : (
+            // User is not logged in
             <>
               <div>
-                <Button 
-                  onClick={authModal.onOpen} 
+                <Button
+                  onClick={authModal.onOpen}
                   className="
                     bg-transparent 
                     text-neutral-300 
@@ -149,8 +152,8 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
                 </Button>
               </div>
               <div>
-                <Button 
-                  onClick={authModal.onOpen} 
+                <Button
+                  onClick={authModal.onOpen}
                   className="bg-white px-6 py-2"
                 >
                   Log in
@@ -163,6 +166,6 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
       {children}
     </div>
   );
-}
+};
 
 export default Header;
