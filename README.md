@@ -7,6 +7,7 @@ Full Stack Spotify Clone
 [![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?logo=tailwind-css&logoColor=white&style=for-the-badge)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/-Supabase-003B68?logo=supabase&logoColor=white&style=for-the-badge)](https://supabase.io/)
 [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white&style=for-the-badge)](https://www.postgresql.org/)
+![Zustand](https://img.shields.io/badge/-Zustand-FFD43B?logo=react&logoColor=white&style=for-the-badge)
 
 This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL. It provides a comprehensive music streaming platform with key features such as song upload, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
 Key Features
