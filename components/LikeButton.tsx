@@ -27,6 +27,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
     }
 
     const fetchData = async () => {
+      // Check if the song is liked by the user
       const { data, error } = await supabaseClient
         .from("liked_songs")
         .select("*")
@@ -35,6 +36,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
         .single();
 
       if (!error && data) {
+        // Set the like state based on the result
         setIsLiked(true);
       }
     };
@@ -46,10 +48,12 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
 
   const handleLike = async () => {
     if (!user) {
+      // If user is not logged in, open the authentication modal
       return authModal.onOpen();
     }
 
     if (isLiked) {
+      // If the song is already liked, remove the like
       const { error } = await supabaseClient
         .from("liked_songs")
         .delete()
@@ -59,9 +63,11 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
       if (error) {
         toast.error(error.message);
       } else {
+        // Update the like state
         setIsLiked(false);
       }
     } else {
+      // If the song is not liked, add the like
       const { error } = await supabaseClient.from("liked_songs").insert({
         song_id: songId,
         user_id: user.id,
@@ -70,11 +76,13 @@ const LikeButton: React.FC<LikeButtonProps> = ({ songId }) => {
       if (error) {
         toast.error(error.message);
       } else {
+        // Update the like state
         setIsLiked(true);
         toast.success("Success");
       }
     }
 
+    // Refresh the page to reflect the updated like status
     router.refresh();
   };
 

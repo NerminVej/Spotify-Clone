@@ -19,6 +19,7 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <Dialog.Root open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
       <Dialog.Portal>
+        {/* Overlay that covers the entire screen */}
         <Dialog.Overlay
           className="
             bg-neutral-900/90 
@@ -50,6 +51,7 @@ const Modal: React.FC<ModalProps> = ({
             focus:outline-none
           "
         >
+          {/* Title of the modal */}
           <Dialog.Title
             className="
               text-xl 
@@ -60,6 +62,7 @@ const Modal: React.FC<ModalProps> = ({
           >
             {title}
           </Dialog.Title>
+          {/* Description text of the modal */}
           <Dialog.Description
             className="
               mb-5 
@@ -70,7 +73,9 @@ const Modal: React.FC<ModalProps> = ({
           >
             {description}
           </Dialog.Description>
+          {/* Content of the modal */}
           <div>{children}</div>
+          {/* Close button */}
           <Dialog.Close asChild>
             <button
               className="

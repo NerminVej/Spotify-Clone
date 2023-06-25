@@ -17,9 +17,11 @@ const MediaItem: React.FC<MediaItemProps> = ({ data, onClick }) => {
 
   const handleClick = () => {
     if (onClick) {
+      // If onClick prop is provided, call the onClick function with the song ID
       return onClick(data.id);
     }
 
+    // If onClick prop is not provided, set the song ID in the player
     return player.setId(data.id);
   };
 

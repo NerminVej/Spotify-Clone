@@ -1,7 +1,7 @@
 import { FaPlay } from "react-icons/fa";
 
 const PlayButton = () => {
-  return ( 
+  return (
     <button
       className="
         transition 
@@ -20,9 +20,10 @@ const PlayButton = () => {
         hover:scale-110
       "
     >
+      {/* Play icon */}
       <FaPlay className="text-black" />
     </button>
-   );
-}
- 
+  );
+};
+
 export default PlayButton;

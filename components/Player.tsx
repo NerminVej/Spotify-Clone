@@ -1,5 +1,3 @@
-"use client";
-
 import usePlayer from "@/hooks/usePlayer";
 import useLoadSongUrl from "@/hooks/useLoadSongUrl";
 import useGetSongById from "@/hooks/useGetSongById";
@@ -17,7 +15,7 @@ const Player = () => {
   }
 
   return (
-    <div 
+    <div
       className="
         fixed 
         bottom-0 
@@ -28,9 +26,10 @@ const Player = () => {
         px-4
       "
     >
+      {/* Render the PlayerContent component */}
       <PlayerContent key={songUrl} song={song} songUrl={songUrl} />
     </div>
   );
-}
+};
 
 export default Player;
