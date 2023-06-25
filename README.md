@@ -12,11 +12,12 @@ Full Stack Spotify Clone
 
 ## Introduction
 
-![](Attachments/SpotifyCloneHome.png)
+
+![](SpotifyCloneHomePage.png)
 
 ## Playlist of Favorites
 
-![](Attachments/LikedSongsPlaylist.png)
+
 
 ## Search Function
 
