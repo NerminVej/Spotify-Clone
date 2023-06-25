@@ -58,19 +58,19 @@ Key Features
 
 To get started with the Full Stack Spotify Clone, follow these steps:
 
-    Clone the repository:
+Clone the repository:
 
-git clone https://github.com/NerminVej/spotify-clone.git
+	git clone https://github.com/NerminVej/spotify-clone.git
 
-    Install dependencies:
+Install dependencies:
 
-cd spotify-clone
-npm install
+	cd spotify-clone
+	npm install
 
-    Set up your environment variables. Refer to the provided .env.example file and fill in the required values.
+Set up your environment variables. Refer to the provided .env.example file and fill in the required values.
 
-    Start the development server:
+Start the development server:
 
-npm run dev
+	npm run dev
 
-    Open your browser and navigate to http://localhost:3000 to access the application.
+Open your browser and navigate to http://localhost:3000 to access the application.
