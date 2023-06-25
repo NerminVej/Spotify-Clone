@@ -32,7 +32,7 @@ Full Stack Spotify Clone
 
 ## Sign up and Log in functionality
 
-![[Spotify-Clone/Attachments/LoginPage.png]]
+![](Attachments/LoginPage.png)
 
 This is a repository for a Full Stack Spotify Clone built with Next.js 13.4, utilizing React, Tailwind CSS, Supabase, PostgreSQL. It provides a comprehensive music streaming platform with key features such as song upload, sleek UI design using Tailwind CSS, responsive layout for all devices, authentication with Supabase, file and image upload using Supabase storage, client-side form validation with react-hook-form, server error handling with react-toast, and advanced player component.
 Key Features
