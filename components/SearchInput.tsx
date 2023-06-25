@@ -1,3 +1,5 @@
+"use client";
+
 import qs from "query-string";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";

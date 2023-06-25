@@ -17,7 +17,7 @@ Full Stack Spotify Clone
 
 ## Playlist of Favorites
 
-
+![](Attachments/FavoritesPlaylist.png)
 
 ## Search Function
 
