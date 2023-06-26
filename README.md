@@ -12,7 +12,6 @@ Full Stack Spotify Clone
 
 ## Introduction
 
-
 ![](SpotifyCloneHomePage.png)
 
 ## Playlist of Favorites
