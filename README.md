@@ -1,6 +1,6 @@
 Full Stack Spotify Clone
 
-## Technologies Used:
+## Technologies Used: 
 
 [![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=next.js&logoColor=white&style=for-the-badge)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white&style=for-the-badge)](https://reactjs.org/)
